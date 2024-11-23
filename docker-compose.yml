@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  nests:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'nest'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'admin'
+      MYSQL_ROOT_PASSWORD: 'admin'
+    ports:
+      - '3321:3306'
+    expose:
+      - '3321'
